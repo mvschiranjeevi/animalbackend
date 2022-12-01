@@ -19,10 +19,13 @@ dotenv.config();
 
 app.use(cors());
 
-mongoose.connect(process.env.DB_PATH, (err) => {
-  if (err) console.log(err);
-  else console.log("mongdb is connected");
-});
+mongoose.connect(
+  "mongodb+srv://newUser:user123@cluster0.tad6sdk.mongodb.net/care-for-animals-db?retryWrites=true&w=majority",
+  (err) => {
+    if (err) console.log(err);
+    else console.log("mongdb is connected");
+  }
+);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
