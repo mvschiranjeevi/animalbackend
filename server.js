@@ -16,7 +16,7 @@ const participate = require("./routes/participation");
 const config = require("config");
 const port = process.env.PORT || 4000;
 
-dotenv.config();
+// dotenv.config();
 
 app.use(cors());
 
